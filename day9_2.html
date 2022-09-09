@@ -1,7 +1,7 @@
 <!Doctype html>
 <html>
 <head>
-    <title>2022 鐵人賽 Day 9-1</title>
+    <title>2022 鐵人賽 Day 9-2</title>
     <style>
 
         body {
@@ -19,6 +19,8 @@
             position: relative;
         }
 
+        /* 以上省略 */
+
         .previous::before {
             content: ' ';
             position: absolute;
@@ -30,6 +32,20 @@
             border-right: 48px solid #222;;
             border-top: 48px solid transparent;
             border-bottom: 48px solid transparent;
+        }
+
+        .previous::after {
+            content: ' ';
+            position: absolute;
+            top: 12px;
+            left: -18px;
+            width: 0;
+            height: 0;
+            border-left: 48px solid transparent;
+            border-right: 48px solid #00aeef;
+            border-top: 48px solid transparent;
+            border-bottom: 48px solid transparent;
+            z-index: 2;
         }
 
     </style>
