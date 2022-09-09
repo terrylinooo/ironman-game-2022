@@ -1,0 +1,48 @@
+<!Doctype html>
+<html>
+<head>
+    <title>2022 鐵人賽 Day 9-1</title>
+    <style>
+
+        .example-wrapper {
+            width: 300px;
+            background-color: #f5f5f5;
+            padding: 10px;
+        }
+
+        .item {
+            border: 1px solid #dddddd;
+            padding: 20px;
+        }
+
+        .item::after {
+            content: '。';
+        }
+       
+        .item:first-child::before {
+            content: '(1)';
+        }
+
+        .item:last-child::before {
+            content: '(4)';
+        }
+
+    </style>
+</head>
+<body>
+    <div class="example-wrapper">
+        <div class="item">
+            月落烏啼雙滿天
+        </div>
+        <div class="item">
+            江楓漁火對愁眠
+        </div>
+        <div class="item">
+            姑蘇城外寒山寺
+        </div>
+        <div class="item">
+            夜半鐘聲到客船
+        </div>
+    </div>
+</body>
+</html>
