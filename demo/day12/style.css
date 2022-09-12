@@ -1,0 +1,73 @@
+.slider-wrapper {
+    width: 800px;
+    margin: 0 auto;
+    border: 2px dashed #aaaaaa;
+    position: relative;
+}
+
+.slider-inner {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.slider-inner .item {
+    flex-basis: 25%;
+}
+
+.slider-inner .item > img {
+    width: 100%;
+}
+
+.slider-button {
+    display: inline-block;
+    overflow: hidden;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #dddddd;
+}
+
+/* 以上省略 */
+
+.previous,
+.next {
+    position: absolute;
+    top: calc(50% - 16px);
+    font-size: 0;
+    cursor: pointer;
+}
+
+.previous {
+    left: -16px;
+}
+
+.next {
+    right: -16px;
+}
+
+.previous::before {
+    content: ' ';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid #222;;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.next::before {
+    content: ' ';
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid #222;;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
