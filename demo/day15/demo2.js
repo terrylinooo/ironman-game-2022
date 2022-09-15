@@ -8,7 +8,6 @@
 
     const exampleHandler = (event, ui) => {
         $(event.target).closest('.example-item').find('.example-value').text(ui.value);
-        console.log(getAttributeData());
         $('#transform-demo').css(getAttributeData());
     };
 
@@ -34,12 +33,17 @@
 
     const initialSlideBars = function () {
         $('.example-bar').each(function () {
+            const min = Number($(this).data('min'));
+            const max = Number($(this).data('max'));
+            const step = Number($(this).data('step'));
+            const value = Number($(this).data('default'));
             $(this).slider({
-                value: 0,
+                value: value,
                 orientation: 'horizontal',
                 range: 'min',
-                min: -100,
-                max: 100,
+                min: min,
+                max: max,
+                step: step,
                 animate: true,
                 change: exampleHandler,
             });
