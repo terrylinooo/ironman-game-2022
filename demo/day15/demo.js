@@ -13,12 +13,23 @@
 
     const getAttributeData = () => {
         let attributeList = {};
-        $('.example-value').each(function () {
+        let attributeGroup = {};
+        $('.example-value').each(function (i) {
             const attribute = $(this).closest('.example-item').attr('data-transform-attribute');
             const unit = $(this).closest('.example-item').attr('data-demo-unit');
             const value = $(this).text();
-            attributeList = {...{'transform': `${attribute}(${value}${unit})`}};
+            if (typeof attributeGroup[attribute] === 'undefined') {
+                attributeGroup[attribute] = [];
+            }
+            attributeGroup[attribute][i] = `${value}${unit}`;
+            
         });
+        Object.keys(attributeGroup).forEach((key) => {
+            const attributeString = attributeGroup[key].map((item) => {
+                return item;
+            }).join(',');
+            attributeList = {...{'transform': `${key}(${attributeString})`}};
+          });
         return attributeList;
     };
 
