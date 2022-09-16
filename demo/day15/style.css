@@ -44,6 +44,11 @@
     width: 100%;
 }
 
+.example-additional-option {
+    width: 400px;
+    margin: 10px auto;
+}
+
 .transform-example {
     width: 400px;
     margin: 0 auto;
@@ -84,4 +89,20 @@
     flex: 0 0 10px;
     padding: 0 5px;
     text-align: center;
+}
+
+.button-option-section[data-action='add'] .button-text-add {
+    display: inline-block;
+}
+
+.button-option-section[data-action='remove'] .button-text-add {
+    display: none;
+}
+
+.button-option-section[data-action='add'] .button-text-remove {
+    display: none;
+}
+
+.button-option-section[data-action='remove'] .button-text-remove {
+    display: inline-block;
 }

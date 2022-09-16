@@ -1,18 +1,18 @@
 /**
- * 範例 15
- * Author: Terry L.
- * URL: https://github.com/terrylinooo
+ * @package demo.js
+ * @author Terry L.
+ * @url https://github.com/terrylinooo
  */
 (function($) {
     'use strict';
 
     const exampleHandler = (event, ui) => {
         $(event.target).closest('.example-item').find('.example-value').text(ui.value);
-        $('#transform-demo').css(getAttributeData());
+        $('#transform-demo').css({'transform': getAttributeString()});
     };
 
-    const getAttributeData = () => {
-        let attributeList = {};
+    const getAttributeString = () => {
+        let attributeList = [];
         let attributeGroup = {};
         $('.example-value').each(function (i) {
             const attribute = $(this).closest('.example-item').attr('data-transform-attribute');
@@ -21,16 +21,15 @@
             if (typeof attributeGroup[attribute] === 'undefined') {
                 attributeGroup[attribute] = [];
             }
-            attributeGroup[attribute][i] = `${value}${unit}`;
-            
+            attributeGroup[attribute].push(`${value}${unit}`);
         });
         Object.keys(attributeGroup).forEach((key) => {
             const attributeString = attributeGroup[key].map((item) => {
                 return item;
             }).join(',');
-            attributeList = {...{'transform': `${key}(${attributeString})`}};
+            attributeList.push(`${key}(${attributeString})`);
           });
-        return attributeList;
+        return attributeList.join(' ');
     };
 
     const initialSlideBars = function () {
@@ -52,11 +51,48 @@
         });
     }
 
+    const getSectionTemplate = (type, min, max, step, defaultValue, unit, position) => {
+        return `
+            <div class="example-item new-added-items-${position}" data-transform-attribute="${type}" data-demo-unit="${unit}">
+                <div class="example-lable">${type}</div>
+                <div class="example-bar" data-min="${min}" data-max="${max}" data-step="${step}" data-default="${defaultValue}"></div>
+                <div class="example-value">${defaultValue}</div>
+                <div class="example-unit">${unit}</div>
+            </div>       
+        `
+    }
+
     $('#button-reset-demo').on('click', function () {
         initialSlideBars();
     });
 
     $(document).on('ready', function () {
+        initialSlideBars();
+    });
+
+    $('.button-option-section').on('click', function () {
+        const position = $(this).attr('data-position');
+        const action = $(this).attr('data-action');
+        const type = $(this).attr('data-type');
+        const min = $(this).attr('data-min');
+        const max = $(this).attr('data-max');
+        const step = $(this).attr('data-step');
+        const defaultValue = $(this).attr('data-default');
+        const unit = $(this).data('unit');
+        if (action === 'remove') {
+            $(`.new-added-items-${position}`).remove();
+            $(this).attr('data-action', 'add');
+        } else if (action === 'add') {
+            const html = getSectionTemplate(type, min, max, step, defaultValue, unit, position);
+            if (position === 'before') {
+                $('.transform-example').prepend(html);
+                $('.new-added-items-after').remove();
+            } else {
+                $('.transform-example').append(html);
+                $('.new-added-items-before').remove();
+            }
+            $(this).attr('data-action', 'remove');
+        }
         initialSlideBars();
     });
 
