@@ -1,13 +1,13 @@
 <!Doctype html>
 <html>
 <head>
-    <title>2022 鐵人賽 Day 16-1 | Trasform: rotateX、rotateY、rotateZ</title>
+    <title>2022 鐵人賽 Day 16-1 | Trasform: translateZ</title>
     <link rel="stylesheet" href="./demo/day15/style.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 </head>
 <body>
     <div class="slider-wrapper">
-        <div class="slider-inner">
+        <div class="slider-inner" >
             <div class="item" id="transform-demo">
                 <img src="./demo/images/logo.png" />
             </div>
@@ -16,24 +16,20 @@
             <button id="button-reset-demo" type="button">重整</button>
         </div>
     </div>
+    <div class="example-additional-option">
+        <button class="button-option-section"type="button" data-type="perspective" data-min="0" data-max="1000" data-step="100" data-default="800" data-unit="px" data-action="add" data-position="before">
+            在前面<span class="button-text-add">加入</span><span class="button-text-remove">刪除</span> perspective 函式
+        </button>
+        <button class="button-option-section" type="button" data-type="perspective" data-min="0" data-max="1000" data-step="100" data-default="800" data-unit="px" data-action="add" data-position="after">
+            在後面<span class="button-text-add">加入</span><span class="button-text-remove">刪除</span> perspective 函式
+        </button>
+    </div>
     <div class="transform-example">
-        <div class="example-item" data-transform-attribute="rotateX" data-demo-unit="deg">
-            <div class="example-lable">rotateX</div>
-            <div class="example-bar" data-min="-180" data-max="180" data-step="10" data-default="0"></div>
+        <div class="example-item" data-transform-attribute="translateZ" data-demo-unit="px">
+            <div class="example-lable">translateZ</div>
+            <div class="example-bar" data-min="-100" data-max="100" data-step="1" data-default="0"></div>
             <div class="example-value">0</div>
-            <div class="example-unit">deg</div>
-        </div>
-        <div class="example-item" data-transform-attribute="rotateY" data-demo-unit="deg">
-            <div class="example-lable">rotateY</div>
-            <div class="example-bar" data-min="-180" data-max="180" data-step="10" data-default="0"></div>
-            <div class="example-value">0</div>
-            <div class="example-unit">deg</div>
-        </div>
-        <div class="example-item" data-transform-attribute="rotateZ" data-demo-unit="deg">
-            <div class="example-lable">rotateZ</div>
-            <div class="example-bar" data-min="-180" data-max="180" data-step="10" data-default="0"></div>
-            <div class="example-value">0</div>
-            <div class="example-unit">deg</div>
+            <div class="example-unit">px</div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>

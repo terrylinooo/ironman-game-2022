@@ -1,13 +1,13 @@
 <!Doctype html>
 <html>
 <head>
-    <title>2022 鐵人賽 Day 16-4 | Trasform: rotate3d</title>
+    <title>2022 鐵人賽 Day 16-2 | Trasform: translateX、Y、Z</title>
     <link rel="stylesheet" href="./demo/day15/style.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 </head>
 <body>
     <div class="slider-wrapper">
-        <div class="slider-inner">
+        <div class="slider-inner" >
             <div class="item" id="transform-demo">
                 <img src="./demo/images/logo.png" />
             </div>
@@ -17,31 +17,31 @@
         </div>
     </div>
     <div class="transform-example">
-        rotate3d
-        <div class="example-item" data-transform-attribute="rotate3d" data-demo-unit="">
-            <div class="example-lable">x</div>
-            <div class="example-bar" data-min="-2" data-max="2" data-step="0.1" data-default="0"></div>
-            <div class="example-value">0</div>
-            <div class="example-unit">(number)</div>
+        <div class="example-item" data-transform-attribute="perspective" data-demo-unit="px">
+            <div class="example-lable">perspective</div>
+            <div class="example-bar" data-min="0" data-max="1000" data-step="10" data-default="800"></div>
+            <div class="example-value">800</div>
+            <div class="example-unit">px</div>
         </div>
-        <div class="example-item" data-transform-attribute="rotate3d" data-demo-unit="">
-            <div class="example-lable">y</div>
-            <div class="example-bar" data-min="-2" data-max="2" data-step="0.1" data-default="0"></div>
+        <div class="example-item" data-transform-attribute="translateX" data-demo-unit="px">
+            <div class="example-lable">translateX</div>
+            <div class="example-bar" data-min="-100" data-max="100" data-step="1" data-default="0"></div>
             <div class="example-value">0</div>
-            <div class="example-unit">(number)</div>
+            <div class="example-unit">px</div>
         </div>
-        <div class="example-item" data-transform-attribute="rotate3d" data-demo-unit="">
-            <div class="example-lable">z</div>
-            <div class="example-bar" data-min="-2" data-max="2" data-step="0.1" data-default="0"></div>
+        <div class="example-item" data-transform-attribute="translateY" data-demo-unit="px">
+            <div class="example-lable">translateY</div>
+            <div class="example-bar" data-min="-100" data-max="100" data-step="1" data-default="0"></div>
             <div class="example-value">0</div>
-            <div class="example-unit">(number)</div>
+            <div class="example-unit">px</div>
         </div>
-        <div class="example-item" data-transform-attribute="rotate3d" data-demo-unit="deg">
-            <div class="example-lable">a</div>
-            <div class="example-bar" data-min="-180" data-max="180" data-step="10" data-default="0"></div>
+        <div class="example-item" data-transform-attribute="translateZ" data-demo-unit="px">
+            <div class="example-lable">translateZ</div>
+            <div class="example-bar" data-min="-100" data-max="100" data-step="1" data-default="0"></div>
             <div class="example-value">0</div>
-            <div class="example-unit">deg</div>
+            <div class="example-unit">px</div>
         </div>
+
     </div>
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>

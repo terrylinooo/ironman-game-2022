@@ -1,7 +1,7 @@
 <!Doctype html>
 <html>
 <head>
-    <title>2022 鐵人賽 Day 16-4 | Trasform: scaleZ</title>
+    <title>2022 鐵人賽 Day 16-6 | Trasform: scale3d</title>
     <link rel="stylesheet" href="./demo/day15/style.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 </head>
@@ -25,11 +25,26 @@
         </button>
     </div>
     <div class="transform-example">
-        <div class="example-item" data-transform-attribute="scaleZ" data-demo-unit="">
-            <div class="example-lable">scaleZ</div>
-            <div class="example-bar" data-min="-10" data-max="10" data-step="0.1" data-default="1"></div>
-            <div class="example-value">1</div>
-            <div class="example-unit">(number)</div>
+        <div class="example-group">
+            scale3d
+            <div class="example-item" data-transform-attribute="scale3d" data-demo-unit="">
+                <div class="example-lable">x</div>
+                <div class="example-bar" data-min="-2" data-max="2" data-step="0.1" data-default="1"></div>
+                <div class="example-value">1</div>
+                <div class="example-unit">(number)</div>
+            </div>
+            <div class="example-item" data-transform-attribute="scale3d" data-demo-unit="">
+                <div class="example-lable">y</div>
+                <div class="example-bar" data-min="-2" data-max="2" data-step="0.1" data-default="1"></div>
+                <div class="example-value">1</div>
+                <div class="example-unit">(number)</div>
+            </div>
+            <div class="example-item" data-transform-attribute="scale3d" data-demo-unit="">
+                <div class="example-lable">z</div>
+                <div class="example-bar" data-min="-2" data-max="2" data-step="0.1" data-default="1"></div>
+                <div class="example-value">1</div>
+                <div class="example-unit">(number)</div>
+            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
