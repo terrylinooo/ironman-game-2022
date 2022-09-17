@@ -8,7 +8,7 @@
 
     const exampleHandler = (event, ui) => {
         $(event.target).closest('.example-item').find('.example-value').text(ui.value);
-        $('#transform-demo').css({'transform': getAttributeString()});
+        $('.item').css({'transform': getAttributeString()});
     };
 
     const getAttributeString = () => {
@@ -47,6 +47,7 @@
                 step: step,
                 animate: true,
                 change: exampleHandler,
+                create: exampleHandler,
             });
         });
     }
@@ -63,6 +64,9 @@
     }
 
     $('#button-reset-demo').on('click', function () {
+        $('.new-added-items-before').remove();
+        $('.new-added-items-after').remove();
+        $('button[data-action="remove"]').attr('data-action', 'add');
         initialSlideBars();
     });
 
@@ -86,10 +90,10 @@
             const html = getSectionTemplate(type, min, max, step, defaultValue, unit, position);
             if (position === 'before') {
                 $('.transform-example').prepend(html);
-                $('.new-added-items-after').remove();
+                $(`.new-added-items-after[data-transform-attribute="${type}"]`).remove();
             } else {
                 $('.transform-example').append(html);
-                $('.new-added-items-before').remove();
+                $(`.new-added-items-before[data-transform-attribute="${type}]"`).remove();
             }
             $(this).attr('data-action', 'remove');
         }

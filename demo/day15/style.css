@@ -91,18 +91,22 @@
     text-align: center;
 }
 
-.button-option-section[data-action='add'] .button-text-add {
+button[data-action='add'] .button-text-add {
     display: inline-block;
 }
 
-.button-option-section[data-action='remove'] .button-text-add {
+button[data-action='remove'] .button-text-add {
     display: none;
 }
 
-.button-option-section[data-action='add'] .button-text-remove {
+button[data-action='add'] .button-text-remove {
     display: none;
 }
 
-.button-option-section[data-action='remove'] .button-text-remove {
+button[data-action='remove'] .button-text-remove {
     display: inline-block;
+}
+
+.example-group {
+    margin: 10px 0;
 }
