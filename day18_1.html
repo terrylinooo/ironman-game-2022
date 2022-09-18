@@ -1,0 +1,47 @@
+<!Doctype html>
+<html>
+<head>
+    <title>2022 鐵人賽 Day 18-1 | Transition: 子屬性賽跑</title>
+    <link rel="stylesheet" href="./demo/day18/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+</head>
+<body>
+    <div class="slider-wrapper">
+        <div class="slider-inner" >
+            <div class="item ease">
+                <img src="https://i.imgur.com/cScFdAz.gif" class="run">
+                <img src="https://i.imgur.com/hmXPWGM.png" class="stop">
+
+            </div>
+            <div class="item ease-in">
+                <img src="https://i.imgur.com/ZjIccs0.gif" class="run">
+                <img src="https://i.imgur.com/FNzEEqt.png" class="stop">
+            </div>
+            <div class="item ease-in-out">
+                <img src="https://i.imgur.com/ItoqBnc.gif" class="run">
+                <img src="https://i.imgur.com/LnrqWfR.png" class="stop">
+            </div>
+            <div class="item ease-out">
+                <img src="https://i.imgur.com/llAuuTm.gif" class="run">
+                <img src="https://i.imgur.com/D7iA6Nz.png" class="stop">
+            </div>
+            <div class="item linear">
+                <img src="https://i.imgur.com/hiwH63T.gif" class="run">
+                <img src="https://i.imgur.com/k9d7HSR.png" class="stop">
+            </div>
+            <div class="item steps">
+                <img src="https://i.imgur.com/Q5CbYKn.gif" class="run">
+                <img src="https://i.imgur.com/DBrHGGM.png" class="stop">
+            </div>
+        </div>
+    </div>
+    <div class="example-additional-option">
+        請隨意點選畫面，觀察變化。
+        <button id="button-start-demo" type="button">開始比賽</button>
+        <button id="button-reset-demo" type="button">重設</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="./demo/day18/example1.js"></script>
+</body>
+</html>
