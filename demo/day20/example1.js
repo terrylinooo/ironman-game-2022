@@ -1,3 +1,3 @@
-import {sayHi} from './sayHi.js';
+import {sayHi} from './say-hi.js';
 
 sayHi();
