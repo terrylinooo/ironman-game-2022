@@ -1,5 +1,5 @@
-import {sayHi} from './sayhi.js';
-import {sayHelloAndHi} from './sayhelloAndHi.js';
+import {sayHi} from './sayHi.js';
+import {sayHelloAndHi} from './sayHelloAndHi.js';
 
 sayHi();
 sayHelloAndHi();
